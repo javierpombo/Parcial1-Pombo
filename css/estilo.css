@@ -1,0 +1,183 @@
+/* estilo.css - sitio publico de City Farmac (encima de Bootstrap) */
+
+:root {
+    --azul: #1565c0;
+    --azul-osc: #0d47a1;
+    --celeste: #4fc3f7;
+    --cyan: #00acc1;
+    --texto: #263238;
+    --gris: #607d8b;
+    --fondo: #eef3f8;
+    --linea: #dbe6ef;
+    --estrella: #ffb300;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+}
+a { color: var(--azul); }
+a:hover { color: var(--azul-osc); }
+.contenedor { max-width: 1150px; }
+
+/* barra de navegacion */
+.barra {
+    background: var(--azul-osc);
+    padding: .6rem 0;
+}
+.barra .marca {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.barra .marca .logo {
+    background: #fff;
+    color: var(--azul-osc);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.barra .nav-link { color: #dcecff !important; font-weight: 600; }
+.barra .nav-link:hover { color: #fff !important; }
+.buscador input { border-radius: 20px 0 0 20px; border: none; }
+.buscador button {
+    border-radius: 0 20px 20px 0;
+    background: var(--celeste);
+    border: none;
+    color: var(--azul-osc);
+    padding: 0 15px;
+}
+
+/* boton general */
+.boton {
+    background: var(--cyan);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: .5rem 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+.boton:hover { background: #00838f; color: #fff; }
+.boton-borde {
+    background: #fff;
+    color: var(--azul);
+    border: 2px solid var(--azul);
+    border-radius: 20px;
+    padding: .4rem 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.boton-borde:hover { background: var(--azul); color: #fff; }
+
+/* hero de la home */
+.portada {
+    background: var(--azul);
+    color: #fff;
+    padding: 3rem 0;
+}
+.portada h1 { font-weight: bold; }
+
+/* titulos de seccion */
+.titulo-seccion {
+    color: var(--azul-osc);
+    font-weight: bold;
+    border-left: 5px solid var(--celeste);
+    padding-left: .6rem;
+    margin: 1.8rem 0 1.2rem;
+}
+
+/* tarjetas de producto */
+.tarjeta {
+    background: #fff;
+    border-radius: 10px;
+    border-top: 4px solid var(--celeste);
+    box-shadow: 0 2px 8px rgba(13,71,161,.08);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta:hover { box-shadow: 0 6px 18px rgba(13,71,161,.18); }
+.tarjeta .foto { height: 170px; background: #e3f2fd; overflow: hidden; }
+.tarjeta .foto img { width: 100%; height: 100%; object-fit: cover; }
+.tarjeta .datos { padding: .8rem 1rem 1rem; display: flex; flex-direction: column; gap: .25rem; flex: 1; }
+.tarjeta .marca-prod { color: var(--cyan); font-size: .8rem; font-weight: bold; text-transform: uppercase; }
+.tarjeta .nombre-prod { font-weight: bold; color: var(--texto); text-decoration: none; }
+.tarjeta .valor { font-size: 1.2rem; font-weight: bold; color: var(--azul-osc); margin-top: auto; }
+.etiqueta-dest {
+    background: var(--estrella);
+    color: #5d4037;
+    font-size: .72rem;
+    font-weight: bold;
+    padding: .1rem .5rem;
+    border-radius: 10px;
+}
+
+/* estrellas */
+.estrellas { color: var(--estrella); }
+
+/* caja de filtros */
+.caja {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(13,71,161,.08);
+    padding: 1.1rem;
+}
+.lista-categorias { list-style: none; padding: 0; margin: 0; }
+.lista-categorias > li { margin-bottom: .5rem; }
+.lista-categorias > li > a { font-weight: bold; color: var(--texto); text-decoration: none; }
+.lista-categorias ul { list-style: none; padding-left: 1rem; margin: .3rem 0; }
+.lista-categorias ul a { color: var(--gris); text-decoration: none; font-size: .92rem; }
+.lista-categorias ul a:hover { color: var(--azul); }
+
+/* detalle */
+.foto-grande { background: #e3f2fd; border-radius: 10px; overflow: hidden; }
+.foto-grande img { width: 100%; }
+
+/* comentarios */
+.comentario { border-bottom: 1px solid var(--linea); padding: .8rem 0; }
+.comentario .autor { font-weight: bold; color: var(--azul-osc); }
+
+/* formularios */
+.form-control:focus { border-color: var(--azul); box-shadow: 0 0 0 .2rem rgba(21,101,192,.15); }
+
+/* seleccion de estrellas en el comentario */
+.elegir-estrellas { display: inline-flex; flex-direction: row-reverse; }
+.elegir-estrellas input { display: none; }
+.elegir-estrellas label { color: #cfd8dc; font-size: 1.6rem; cursor: pointer; margin: 0; }
+.elegir-estrellas input:checked ~ label,
+.elegir-estrellas label:hover,
+.elegir-estrellas label:hover ~ label { color: var(--estrella); }
+
+/* estado vacio */
+.vacio { text-align: center; padding: 3rem 1rem; color: var(--gris); }
+.vacio i { font-size: 3rem; color: var(--linea); }
+
+/* avisos */
+.aviso-ok { background: #e1f5fe; color: #0277bd; border-radius: 8px; padding: .8rem 1rem; }
+.aviso-error { background: #ffebee; color: #c62828; border-radius: 8px; padding: .8rem 1rem; }
+
+/* pie */
+.pie {
+    background: var(--azul-osc);
+    color: #cfe3ff;
+    padding: 2rem 0 1.2rem;
+    margin-top: 3rem;
+}
+.pie a { color: #fff; }
+.pie h6 { color: #fff; }
+
+/* error 404 */
+.error404 { text-align: center; padding: 4rem 1rem; }
+.error404 .numero { font-size: 6rem; font-weight: bold; color: var(--celeste); }

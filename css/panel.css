@@ -1,0 +1,98 @@
+/* panel.css - panel de administracion de City Farmac */
+
+:root {
+    --azul: #1565c0;
+    --azul-osc: #0d47a1;
+    --celeste: #4fc3f7;
+    --cyan: #00acc1;
+    --texto: #263238;
+    --gris: #607d8b;
+    --fondo: #eef3f8;
+    --linea: #dbe6ef;
+    --estrella: #ffb300;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+}
+
+/* barra superior del panel */
+.barra-panel { background: var(--azul-osc); padding: .5rem 0; }
+.barra-panel .titulo-panel { color: #fff; font-weight: bold; font-size: 1.2rem; text-decoration: none; }
+.barra-panel .titulo-panel .logo {
+    background: #fff; color: var(--azul-osc); width: 30px; height: 30px;
+    border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: .3rem;
+}
+.menu-panel { background: var(--azul); }
+.menu-panel a {
+    color: #dcecff; text-decoration: none; padding: .6rem 1rem; display: inline-block; font-weight: 600; font-size: .92rem;
+}
+.menu-panel a:hover { background: var(--azul-osc); color: #fff; }
+.menu-panel a.activo { background: var(--azul-osc); color: #fff; }
+
+/* contenido */
+.contenido-panel { max-width: 1150px; margin: 1.5rem auto; padding: 0 15px; }
+.titulo-pagina { color: var(--azul-osc); font-weight: bold; margin-bottom: 1.2rem; }
+
+/* botones */
+.boton {
+    background: var(--cyan); color: #fff; border: none; border-radius: 20px;
+    padding: .45rem 1.2rem; font-weight: bold; text-decoration: none; display: inline-block; cursor: pointer;
+}
+.boton:hover { background: #00838f; color: #fff; }
+
+/* tabla propia (sin DataTables) */
+.tabla-datos { width: 100%; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(13,71,161,.08); border-collapse: collapse; }
+.tabla-datos thead th { background: var(--azul); color: #fff; padding: .7rem .8rem; text-align: left; font-size: .9rem; }
+.tabla-datos tbody td { padding: .6rem .8rem; border-top: 1px solid var(--linea); vertical-align: middle; }
+.tabla-datos tbody tr:hover { background: #f5f9fd; }
+
+/* buscador de la tabla */
+.buscar-tabla {
+    border: 1px solid var(--linea); border-radius: 20px; padding: .4rem 1rem; width: 260px; max-width: 100%;
+}
+
+/* chips de estado */
+.chip { font-size: .75rem; font-weight: bold; padding: .18rem .6rem; border-radius: 12px; }
+.chip-si { background: #e1f5fe; color: #0277bd; }
+.chip-no { background: #eceff1; color: #78909c; }
+
+/* botones de accion de la tabla */
+.accion { border: 1px solid var(--linea); background: #fff; border-radius: 6px; padding: .25rem .5rem; color: var(--azul); cursor: pointer; text-decoration: none; }
+.accion:hover { background: var(--azul); color: #fff; }
+
+/* estrellas */
+.estrellas { color: var(--estrella); }
+
+/* caja de formulario (aparece al tocar "nuevo") */
+.caja-form {
+    background: #fff; border-radius: 10px; padding: 1.3rem; margin-bottom: 1.3rem;
+    box-shadow: 0 2px 8px rgba(13,71,161,.08); border-top: 4px solid var(--celeste);
+}
+.form-control:focus { border-color: var(--azul); box-shadow: 0 0 0 .2rem rgba(21,101,192,.15); }
+
+/* avisos */
+.aviso-ok { background: #e1f5fe; color: #0277bd; border-radius: 8px; padding: .8rem 1rem; margin-bottom: 1rem; }
+
+/* login y registro */
+.fondo-acceso {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--azul) 0%, var(--cyan) 100%); padding: 1rem;
+}
+.tarjeta-acceso { background: #fff; border-radius: 14px; padding: 2rem; width: 100%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+.tarjeta-acceso .logo-grande {
+    background: var(--azul); color: #fff; width: 64px; height: 64px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;
+}
+
+/* tarjetas del inicio del panel */
+.tarjeta-seccion {
+    background: #fff; border-radius: 10px; padding: 1.3rem; text-decoration: none; color: var(--texto);
+    display: block; box-shadow: 0 2px 8px rgba(13,71,161,.08); border-left: 4px solid var(--azul); height: 100%;
+}
+.tarjeta-seccion:hover { box-shadow: 0 6px 18px rgba(13,71,161,.18); color: var(--azul-osc); }
+.tarjeta-seccion i { color: var(--azul); }
+.tarjeta-numero { background: #fff; border-radius: 10px; padding: 1.1rem; text-align: center; box-shadow: 0 2px 8px rgba(13,71,161,.08); }
+.tarjeta-numero .n { font-size: 2rem; font-weight: bold; color: var(--azul); }
