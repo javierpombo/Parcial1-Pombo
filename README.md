@@ -43,20 +43,20 @@ puede poner a mano en ese mismo archivo.
 
 Sitio:
 
-- front/inicio.php - inicio con productos destacados
-- front/productos.php - listado con categorias, filtro por marca y orden
-- front/producto.php?id=1 - detalle del producto
-- front/contacto.php - contacto
-- front/error404.php - pagina de error
+- inicio con productos destacados: http://localhost/city-farmac-v2/front/inicio.php
+- listado con categorias, filtro por marca y orden: http://localhost/city-farmac-v2/front/productos.php
+- detalle del producto: http://localhost/city-farmac-v2/front/producto.php?id=1
+- contacto: http://localhost/city-farmac-v2/front/contacto.php
+- pagina de error: http://localhost/city-farmac-v2/front/error404.php
 
 Panel:
 
-- admin/login.php - ingreso
-- admin/registro.php - registro
-- admin/panel.php - inicio del panel
-- admin/productos.php - productos
-- admin/categorias.php - categorias y subcategorias
-- admin/marcas.php - marcas
-- admin/comentarios.php - comentarios
-- admin/usuarios.php - usuarios
-- admin/perfiles.php - perfiles
+- ingreso: http://localhost/city-farmac-v2/admin/login.php
+- registro: http://localhost/city-farmac-v2/admin/registro.php
+- inicio del panel: http://localhost/city-farmac-v2/admin/panel.php
+- productos: http://localhost/city-farmac-v2/admin/productos.php
+- categorias y subcategorias: http://localhost/city-farmac-v2/admin/categorias.php
+- marcas: http://localhost/city-farmac-v2/admin/marcas.php
+- comentarios: http://localhost/city-farmac-v2/admin/comentarios.php
+- usuarios: http://localhost/city-farmac-v2/admin/usuarios.php
+- perfiles: http://localhost/city-farmac-v2/admin/perfiles.php
